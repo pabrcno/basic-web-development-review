@@ -73,6 +73,7 @@ nav {
   color: $primary-color;
   font-weight: bold;
   padding: 0 8vw;
+  z-index: 1;
 
   ul {
     display: flex;
