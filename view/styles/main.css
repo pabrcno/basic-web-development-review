@@ -4,7 +4,7 @@ footer {
   color: #151515;
   padding: 1rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1em;
   font-family: "Poppins", sans-serif;
   margin-top: 10vh;
 }
@@ -45,7 +45,7 @@ nav {
   position: sticky;
   top: 0;
   min-height: 10vh;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   background-color: #dbd4d3df;
   color: #151515;
   font-weight: bold;
@@ -72,14 +72,14 @@ nav ul li {
 }
 
 nav a {
-  -webkit-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   color: #e16e1f;
   text-decoration: none;
 }
 
 nav a:hover {
-  font-size: 1.3em;
+  color: #00c9b9;
 }
 
 nav a.logo {
@@ -109,6 +109,7 @@ nav a.logo p {
 }
 
 .main-content {
+  margin-top: 2vh;
   padding: 0 12vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,5 +160,11 @@ nav a.logo p {
           filter: drop-shadow(23px 20px 15px rgba(0, 0, 0, 0.4));
   min-height: 30em;
   max-height: 35em;
+}
+
+@media screen and (max-width: 600px) {
+  .disappear-on-small-screen {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
