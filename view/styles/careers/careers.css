@@ -17,5 +17,6 @@
 
 .worker {
   width: 65%;
+  min-width: 600px;
 }
 /*# sourceMappingURL=careers.css.map */
