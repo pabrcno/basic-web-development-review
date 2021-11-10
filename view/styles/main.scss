@@ -37,7 +37,8 @@ $font-family: "Poppins", sans-serif;
 @mixin column() {
   @include flex-column();
   width: 50%;
-  @media screen and (max-width: 800px) {
+  margin: 2% 0;
+  @media screen and (max-width: 900px) {
     width: 90%;
   }
 
@@ -84,6 +85,9 @@ nav {
     align-items: center;
     list-style: none;
     font-size: 1.2em;
+    @media screen and (max-width: 800px) {
+      font-size: 1.3em;
+    }
     li {
       padding: 0 1em;
     }
