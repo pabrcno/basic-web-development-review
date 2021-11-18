@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/calculator/calculator.css" />
     <link rel="icon" href="../assets/images/Pyramid_backwards.svg" />
     <title>Paulo's Calculator</title>
   </head>
@@ -29,36 +30,26 @@
       </ul>
     </nav>
     <!--professionals select-->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label for="professionals">Professionals</label>
-            <select class="form-control" id="professionals">
-              <option>Select Professional</option>
-              <option>Designer</option>
-              <option>Developer</option>
-              <option>Manager</option>
-            </select>
-          </div>
-        </div>
+
+    <div class="calculator">
+      <div>
+        <label for="professionals">Professionals</label>
+        <select id="professionals" required>
+          <option>Select Professional</option>
+          <option>Designer</option>
+          <option>Developer</option>
+          <option>Manager</option>
+        </select>
       </div>
-    </div>
-    <!--hours text input-->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label for="hours">Hours</label>
-            <input
-              type="text"
-              class="form-control"
-              id="hours"
-              placeholder="Enter Hours"
-            />
-          </div>
-        </div>
+      <!--hours text input-->
+      <div>
+        <label for="hours">Hours</label>
+        <input type="number" id="hours" placeholder="Enter Hours" required />
       </div>
+      <button type="submit" value="Calculate" id="calculate">Calculate</button>
     </div>
+    <div id="result" class="resume"></div>
+
+    <script type="module" src="../scripts/main.js"></script>
   </body>
 </html>

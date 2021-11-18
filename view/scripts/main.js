@@ -2,9 +2,30 @@ import Calculator from "./calculator/calculator.js";
 
 const calculator = new Calculator();
 
-var inputProfessional = prompt(
-  "We can offer you a Designer, a Developer or a Manager"
-);
-var inputHours = prompt("How many hours do you need him/her?");
+var selectedProfessional = "";
+var hours = 0;
 
-calculator.showTotal(inputProfessional, inputHours);
+var professionalsSelect = document.getElementById("professionals");
+var hoursInput = document.getElementById("hours");
+var calculateButton = document.getElementById("calculate");
+
+professionalsSelect.addEventListener("change", () => {
+  selectedProfessional = professionalsSelect.value;
+});
+
+hoursInput.addEventListener("change", () => {
+  hours = parseInt(hoursInput.value);
+});
+
+calculateButton.addEventListener("click", () => {
+  var results = calculator.calculate(selectedProfessional, hours);
+  var result = `<h2>Resume</h2>
+  <p>Professional: ${selectedProfessional}</p>
+  <p>Hours: ${hours}</p>
+  <p>Hourly Rate: ${results.hourlyRate}</p>
+  <p>Total: ${results.total}</p>
+  <p>Total with Tax: ${results.totalWithTax}</p>
+  <p>Total with Discount: ${results.totalWithDiscount}</p>`;
+
+  document.getElementById("result").innerHTML = result;
+});
