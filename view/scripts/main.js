@@ -22,10 +22,10 @@ calculateButton.addEventListener("click", () => {
   var result = `<h2>Resume</h2>
   <p>Professional: ${selectedProfessional}</p>
   <p>Hours: ${hours}</p>
-  <p>Hourly Rate: ${results.hourlyRate}</p>
-  <p>Total: ${results.total}</p>
-  <p>Total with Tax: ${results.totalWithTax}</p>
-  <p>Total with Discount: ${results.totalWithDiscount}</p>`;
+  <p>Hourly Rate: ${results.hourlyRate}$</p>
+  <p>Total: ${results.total}$</p>
+  <p>Total with Tax: ${results.totalWithTax}$</p>
+  <p>Total with Discount: ${results.totalWithDiscount}$</p>`;
 
   document.getElementById("result").innerHTML = result;
 });
