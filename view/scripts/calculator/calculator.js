@@ -62,8 +62,5 @@ class Calculator {
       totalWithDiscount: Math.round(totalWithDiscount),
     };
   };
-  showTotal = (professional, hours) => {
-    alert(`You will have to pay ${this.calculate(professional, hours)}$`);
-  };
 }
 export default Calculator;
