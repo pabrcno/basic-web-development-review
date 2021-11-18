@@ -21,11 +21,10 @@ calculateButton.addEventListener("click", () => {
   var results = calculator.calculate(selectedProfessional, hours);
   //save results to local storage
   localStorage.setItem("results", JSON.stringify(results));
-  //show results
 
   //get results from local storage
   results = JSON.parse(localStorage.getItem("results"));
-
+  //show results
   var result = `<h2>Resume</h2>
   <p>Professional: ${selectedProfessional}</p>
   <p>Hours: ${hours}</p>
