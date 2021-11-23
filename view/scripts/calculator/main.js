@@ -1,4 +1,4 @@
-import Calculator from "./calculator/calculator.js";
+import Calculator from "./calculator.js";
 
 const calculator = new Calculator();
 
@@ -35,3 +35,5 @@ calculateButton.addEventListener("click", () => {
 
   document.getElementById("result").innerHTML = result;
 });
+
+// contact form using jquery
