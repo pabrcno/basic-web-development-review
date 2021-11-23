@@ -14,7 +14,7 @@ class Calculator {
 
   // Receives an number array and returns the sum of the number number plus 10% of the number
   addTaxToTotal = (numberArray) => {
-    var sum = numberArray.reduce(function (a, b) {
+    let sum = numberArray.reduce(function (a, b) {
       a + b;
     });
     return sum * 1.1;
@@ -35,7 +35,7 @@ class Calculator {
   };
   //determine discount
   getDiscount = (totalWithTax, hours) => {
-    var totalWithDiscount;
+    let totalWithDiscount;
     if (hours > 100) {
       totalWithDiscount = this.applyBigDiscount(totalWithTax);
     } else if (50 < hours < 100) {
@@ -49,10 +49,10 @@ class Calculator {
   //calculation logic
   calculate = (professional, hours) => {
     hours = parseInt(hours);
-    var hourlyRate = this.getHourlyRate(professional);
-    var total = hourlyRate * hours;
-    var totalWithTax = this.addTax(total);
-    var totalWithDiscount = this.getDiscount(totalWithTax, hours);
+    let hourlyRate = this.getHourlyRate(professional);
+    let total = hourlyRate * hours;
+    let totalWithTax = this.addTax(total);
+    let totalWithDiscount = this.getDiscount(totalWithTax, hours);
 
     return {
       hours: hours,

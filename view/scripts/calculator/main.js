@@ -2,12 +2,12 @@ import Calculator from "./calculator.js";
 
 const calculator = new Calculator();
 
-var selectedProfessional = "";
-var hours = 0;
+let selectedProfessional = "";
+let hours = 0;
 
-var professionalsSelect = document.getElementById("professionals");
-var hoursInput = document.getElementById("hours");
-var calculateButton = document.getElementById("calculate");
+let professionalsSelect = document.getElementById("professionals");
+let hoursInput = document.getElementById("hours");
+let calculateButton = document.getElementById("calculate");
 
 professionalsSelect.addEventListener("change", () => {
   selectedProfessional = professionalsSelect.value;
@@ -18,14 +18,14 @@ hoursInput.addEventListener("change", () => {
 });
 
 calculateButton.addEventListener("click", () => {
-  var results = calculator.calculate(selectedProfessional, hours);
+  let results = calculator.calculate(selectedProfessional, hours);
   //save results to local storage
   localStorage.setItem("results", JSON.stringify(results));
 
   //get results from local storage
   results = JSON.parse(localStorage.getItem("results"));
   //show results
-  var result = `<h2>Resume</h2>
+  let result = `<h2>Resume</h2>
   <p>Professional: ${selectedProfessional}</p>
   <p>Hours: ${hours}</p>
   <p>Hourly Rate: ${results.hourlyRate}$</p>
